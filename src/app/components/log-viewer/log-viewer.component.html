@@ -1,0 +1,19 @@
+<div class="log-view-component-wrapper">
+  <h1>Log File Viewer</h1>
+  <form (submit)="onViewClick($event)">
+    <input type="text" name="path" aria-label="File path" [(ngModel)]="filePath" placeholder="/path/to/file" />
+    <input type="submit" value="View" />
+    <span *ngIf="error" class="error-messages">({{error.code}}) {{error.message}}</span>
+  </form>
+  <div *ngIf="vm && !error">
+     <ol start="{{vm.counts.start}}" class="line-viewer">
+      <li *ngFor="let line of vm.lines;" >{{line}}</li>
+    </ol>
+    <div class="pagination-controls">
+      <button (click)="onFirstClick($event)" [disabled]="page == 1" aria-label="First page">&#x21E4;</button>
+      <button (click)="onPrevClick($event)" [disabled]="page == 1" aria-label="Previous page">&#x2190;</button>
+      <button (click)="onNextClick($event)" [disabled]="vm.counts.currentPage == vm.counts.totalPages" aria-label="Last page">&#x2192;</button> 
+      <button (click)="onLastClick($event)" [disabled]="vm.counts.currentPage == vm.counts.totalPages" aria-label="Next page">&#x21E5;</button>
+    </div> 
+  </div>
+</div>

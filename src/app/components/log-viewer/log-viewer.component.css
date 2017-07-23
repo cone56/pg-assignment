@@ -1,0 +1,7 @@
+.log-view-component-wrapper {
+    font-family: monospace;
+    word-break: break-word;
+}
+.error-messages {
+    color: red;
+}
