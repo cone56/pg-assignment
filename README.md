@@ -13,10 +13,10 @@ In the file path textbox, enter a path to a log file or use the included test lo
 
 ## Run tests and linter ##
 
-* `ng test`
-* `ng e2e`
+* `npm run test`
 * `npm run test-server` (ensure the included test file is located at `/var/log/test.log`)
-* `ng lint`
+* `npm run e2e`
+* `npm run lint`
 
 ## Todo ##
 
