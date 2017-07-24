@@ -1,6 +1,6 @@
 # PG Assignment #
 
-Solution to the problem described in `ASSIGNMENT.md`
+Solution to the problem described in [`ASSIGNMENT.md`](ASSIGNMENT.md)
 
 ## Getting started ##
 
