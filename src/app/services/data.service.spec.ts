@@ -29,7 +29,7 @@ describe('DataService', () => {
   describe('mock getLines()', () => {
 
     it('should return an successful Observable<IApiResponseModel>',
-        inject([DataService, XHRBackend], (dataService, mockBackend) => {
+      inject([DataService, XHRBackend], (dataService, mockBackend) => {
 
         const mockRequest: IApiRequestModel = {
           path: '/var/test.log',
@@ -67,13 +67,6 @@ describe('DataService', () => {
           expect(data.lines[0]).toEqual('line 1');
           expect(data.counts.totalLines).toBe(3);
         });
-
-    }));
-
-
-    // add more tests here to check error responses:
-
-
+      }));
   });
-
 });
